@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>FAQ — Dependency Manager</title>
+
+    <link rel="stylesheet" href="css/98.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div class="window">
+
+        <div class="title-bar">
+            <div class="title-bar-text">
+                Dependency Manager
+            </div>
+
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+
+        <div class="window-body">
+
+<nav class="main-nav" aria-label="Основная навигация">
+
+    <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Открыть меню"
+        aria-expanded="false">
+        ☰ Меню
+    </button>
+
+    <div class="nav-buttons" id="navButtons">
+
+        <button onclick="location.href='index.html'">
+            Главная
+        </button>
+
+        <button onclick="location.href='npm.html'">
+            NPM
+        </button>
+
+        <button onclick="location.href='composer.html'">
+            Composer
+        </button>
+
+        <button onclick="location.href='comparison.html'">
+            Сравнение
+        </button>
+
+        <button onclick="location.href='installation.html'">
+            Установка
+        </button>
+
+        <button onclick="location.href='practice.html'">
+            Практика
+        </button>
+
+        <button onclick="location.href='faq.html'">
+            FAQ
+        </button>
+
+    </div>
+
+</nav>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main class="container">
+
+    <div class="content-wrapper">
+
+        <div class="main-content">
+
+
+            <!-- FAQ -->
+
+            <section class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Часто задаваемые вопросы
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <h3>Что такое менеджер зависимостей?</h3>
+
+                    <p>
+                        Менеджер зависимостей — это инструмент, который
+                        помогает разработчику устанавливать, обновлять,
+                        удалять и контролировать библиотеки проекта.
+                    </p>
+
+
+                    <h3>Для чего нужен NPM?</h3>
+
+                    <p>
+                        NPM используется для управления пакетами
+                        JavaScript и Node.js-проектов.
+                    </p>
+
+
+                    <h3>Для чего нужен Composer?</h3>
+
+                    <p>
+                        Composer используется для управления зависимостями
+                        PHP-проектов.
+                    </p>
+
+
+                    <h3>Что такое package.json?</h3>
+
+                    <p>
+                        package.json — файл, содержащий информацию
+                        о NPM-проекте, его зависимостях, скриптах
+                        и настройках.
+                    </p>
+
+
+                    <h3>Что такое composer.json?</h3>
+
+                    <p>
+                        composer.json — основной конфигурационный файл
+                        проекта, использующего Composer.
+                    </p>
+
+
+                    <h3>Зачем нужен package-lock.json?</h3>
+
+                    <p>
+                        Этот файл фиксирует версии установленных
+                        зависимостей и их дерево, что помогает
+                        воспроизводить установку проекта.
+                    </p>
+
+
+                    <h3>Что такое node_modules?</h3>
+
+                    <p>
+                        Это каталог, в котором NPM хранит установленные
+                        зависимости проекта.
+                    </p>
+
+
+                    <h3>Что такое vendor?</h3>
+
+                    <p>
+                        Это каталог, который Composer использует
+                        для хранения установленных PHP-зависимостей.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Форма -->
+
+            <section class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Обратная связь
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        Если у вас остались вопросы по теме,
+                        заполните форму ниже.
+                    </p>
+
+                    <form action="#" method="post">
+
+                        <div class="field-row-stacked">
+                            <label for="name">
+                                Ваше имя:
+                            </label>
+
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Введите имя"
+                                required>
+                        </div>
+
+
+                        <br>
+
+
+                        <div class="field-row-stacked">
+                            <label for="email">
+                                Электронная почта:
+                            </label>
+
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="example@mail.com"
+                                required>
+                        </div>
+
+
+                        <br>
+
+
+                        <div class="field-row-stacked">
+
+                            <label for="topic">
+                                Тема вопроса:
+                            </label>
+
+                            <select id="topic" name="topic">
+
+                                <option value="npm">
+                                    NPM
+                                </option>
+
+                                <option value="composer">
+                                    Composer
+                                </option>
+
+                                <option value="comparison">
+                                    Сравнение
+                                </option>
+
+                                <option value="other">
+                                    Другое
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <br>
+
+
+                        <div class="field-row-stacked">
+
+                            <label for="message">
+                                Ваш вопрос:
+                            </label>
+
+                            <textarea
+                                id="message"
+                                name="message"
+                                rows="6"
+                                placeholder="Введите вопрос..."
+                                required></textarea>
+
+                        </div>
+
+
+                        <br>
+
+
+                        <div class="field-row">
+
+                            <input
+                                type="checkbox"
+                                id="agree"
+                                name="agree"
+                                required>
+
+                            <label for="agree">
+                                Я согласен на обработку данных
+                            </label>
+
+                        </div>
+
+
+                        <br>
+
+
+                        <button type="submit">
+                            Отправить вопрос
+                        </button>
+
+                        <button type="reset">
+                            Очистить
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </section>
+
+
+            <!-- Полезные материалы -->
+
+            <section class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Полезные материалы
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        Для изучения темы можно обратиться
+                        к официальной документации соответствующих
+                        инструментов.
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            <a
+                                href="https://www.npmjs.com/"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                Официальный сайт NPM
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="https://getcomposer.org/"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                Официальный сайт Composer
+                            </a>
+                        </li>
+
+                        <li>
+                            <a
+                                href="https://nodejs.org/"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                Официальный сайт Node.js
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+
+        <aside class="sidebar">
+
+
+            <section class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Навигация
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <ul>
+
+                        <li>
+                            <a href="index.html">
+                                Главная
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="npm.html">
+                                NPM
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="composer.html">
+                                Composer
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="comparison.html">
+                                Сравнение
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="package-json.html">
+                                package.json
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="composer-json.html">
+                                composer.json
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="installation.html">
+                                Установка
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="practice.html">
+                                Практика
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="faq.html">
+                                FAQ
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </section>
+
+
+            <section class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        О проекте
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        Dependency Manager — учебный сайт
+                        о системах управления зависимостями.
+                    </p>
+
+                    <p>
+                        На сайте рассмотрены NPM и Composer,
+                        их файлы конфигурации, команды
+                        и особенности использования.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+        </aside>
+
+    </div>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="window">
+
+        <div class="window-body">
+
+            <p>
+                © 2026 Dependency Manager
+            </p>
+
+            <p>
+                Учебный проект по системам управления зависимостями
+                NPM и Composer.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="js/main.js"></script>
+
+</body>
+
+</html>

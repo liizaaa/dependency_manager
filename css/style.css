@@ -1,0 +1,168 @@
+body {
+    margin: 0;
+    padding: 20px;
+}
+
+.site-header {
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 300px;
+    gap: 20px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.hero {
+    margin-bottom: 20px;
+}
+
+.system-card {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.system-card:last-child {
+    margin-bottom: 0;
+}
+
+.site-footer {
+    max-width: 1200px;
+    margin: 20px auto 0;
+}
+
+
+@media (max-width: 767px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .content-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        order: 2;
+    }
+
+}
+
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+caption {
+    margin-bottom: 10px;
+    font-weight: bold;
+    text-align: left;
+}
+
+th,
+td {
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+}
+
+.video-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    max-width: 100%;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.nav-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+@media (max-width: 767px) {
+
+    .main-nav {
+        display: block;
+    }
+
+    .menu-toggle {
+        display: inline-block;
+        margin-bottom: 8px;
+    }
+
+    .nav-buttons {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .nav-buttons.active {
+        display: flex;
+    }
+
+    .nav-buttons button {
+        width: 100%;
+        text-align: left;
+    }
+}
+
+
+@media (min-width: 768px) {
+    .content-wrapper {
+        grid-template-columns: 1fr 280px;
+    }
+
+    .main-nav {
+        display: flex;
+    }
+
+    .nav-buttons {
+        display: flex;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .content-wrapper {
+        grid-template-columns: 1fr 300px;
+    }
+
+    .container,
+    .site-footer {
+        max-width: 1200px;
+    }
+}

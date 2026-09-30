@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Практика — Dependency Manager</title>
+
+    <link rel="stylesheet" href="css/98.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div class="window">
+
+        <div class="title-bar">
+            <div class="title-bar-text">
+                Dependency Manager
+            </div>
+
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+
+        <div class="window-body">
+
+<nav class="main-nav" aria-label="Основная навигация">
+
+    <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Открыть меню"
+        aria-expanded="false">
+        ☰ Меню
+    </button>
+
+    <div class="nav-buttons" id="navButtons">
+
+        <button onclick="location.href='index.html'">
+            Главная
+        </button>
+
+        <button onclick="location.href='npm.html'">
+            NPM
+        </button>
+
+        <button onclick="location.href='composer.html'">
+            Composer
+        </button>
+
+        <button onclick="location.href='comparison.html'">
+            Сравнение
+        </button>
+
+        <button onclick="location.href='installation.html'">
+            Установка
+        </button>
+
+        <button onclick="location.href='practice.html'">
+            Практика
+        </button>
+
+        <button onclick="location.href='faq.html'">
+            FAQ
+        </button>
+
+    </div>
+
+</nav>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main class="container">
+
+    <div class="content-wrapper">
+
+        <div class="main-content">
+
+
+            <!-- Введение -->
+
+            <section class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Практический пример
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        Рассмотрим простой пример создания проекта
+                        с использованием NPM.
+                    </p>
+
+                    <p>
+                        Предположим, что разработчик создаёт новый
+                        веб-проект и хочет использовать стороннюю
+                        библиотеку. Для управления этой библиотекой
+                        можно использовать NPM.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Шаг 1 -->
+
+            <section class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Шаг 1. Создание папки
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        Сначала создаём новую папку проекта:
+                    </p>
+
+                    <pre><code>mkdir my-project</code></pre>
+
+                    <p>
+                        После этого переходим в созданную папку:
+                    </p>
+
+                    <pre><code>cd my-project</code></pre>
+
+                </div>
+
+            </section>
+
+
+            <!-- Шаг 2 -->
+
+            <section class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Шаг 2. Инициализация NPM
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        Теперь создаём файл
+                        <strong>package.json</strong>:
+                    </p>
+
+                    <pre><code>npm init -y</code></pre>
+
+                    <p>
+                        После выполнения команды NPM создаст
+                        конфигурационный файл проекта.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Шаг 3 -->
+
+            <section class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Шаг 3. Установка зависимости
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        Теперь установим библиотеку
+                        <strong>98.css</strong>:
+                    </p>
+
+                    <pre><code>npm install 98.css</code></pre>
+
+                    <p>
+                        После установки в проекте появится каталог
+                        <strong>node_modules</strong>.
+                    </p>
+
+                    <p>
+                        Информация о библиотеке также будет записана
+                        в файл <strong>package.json</strong>.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Шаг 4 -->
+
+            <section class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Шаг 4. Проверка зависимости
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        Проверить установленные пакеты можно командой:
+                    </p>
+
+                    <pre><code>npm list</code></pre>
+
+                    <p>
+                        В результате NPM покажет дерево установленных
+                        зависимостей проекта.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Шаг 5 -->
+
+            <section class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Шаг 5. Работа с package.json
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        После выполнения команд структура проекта
+                        будет примерно такой:
+                    </p>
+
+                    <pre><code>my-project/
+│
+├── node_modules/
+│
+├── package.json
+│
+└── package-lock.json</code></pre>
+
+                    <p>
+                        Каталог <strong>node_modules</strong> содержит
+                        установленные пакеты.
+                    </p>
+
+                    <p>
+                        <strong>package.json</strong> содержит информацию
+                        о зависимостях и настройках проекта.
+                    </p>
+
+                    <p>
+                        <strong>package-lock.json</strong> фиксирует
+                        конкретные версии установленных зависимостей
+                        и их дерево.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Удаление -->
+
+            <section class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Удаление зависимости
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        Если библиотека больше не нужна, её можно удалить:
+                    </p>
+
+                    <pre><code>npm uninstall 98.css</code></pre>
+
+                    <p>
+                        NPM удалит пакет из проекта и обновит
+                        информацию о зависимостях.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Итог -->
+
+            <section class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Результат
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        Таким образом, NPM позволяет управлять
+                        зависимостями проекта практически на всех
+                        этапах разработки.
+                    </p>
+
+                    <ol>
+
+                        <li>
+                            Создать проект.
+                        </li>
+
+                        <li>
+                            Создать package.json.
+                        </li>
+
+                        <li>
+                            Установить необходимые пакеты.
+                        </li>
+
+                        <li>
+                            Проверить зависимости.
+                        </li>
+
+                        <li>
+                            Обновить или удалить пакеты.
+                        </li>
+
+                    </ol>
+
+                </div>
+
+            </section>
+
+
+            <!-- Видео -->
+
+            <section class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Видео о NPM
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        Ниже можно разместить обучающее видео,
+                        посвящённое работе с NPM.
+                    </p>
+
+                    <div class="video-container">
+
+                        <iframe
+                            width="560"
+                            height="315"
+                            src="https://www.youtube.com/embed/72E3T6r4s8U"
+                            title="Обучающее видео о NPM"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                        </iframe>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+
+        <aside class="sidebar">
+
+
+            <section class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Разделы
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <ul>
+
+                        <li>
+                            <a href="index.html">
+                                Главная
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="npm.html">
+                                NPM
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="composer.html">
+                                Composer
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="comparison.html">
+                                Сравнение
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="package-json.html">
+                                package.json
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="composer-json.html">
+                                composer.json
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="installation.html">
+                                Установка
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="practice.html">
+                                Практика
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </section>
+
+
+            <section class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Команды
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        Создание проекта:
+                    </p>
+
+                    <code>npm init -y</code>
+
+                    <p>
+                        Установка пакета:
+                    </p>
+
+                    <code>npm install package</code>
+
+                    <p>
+                        Удаление пакета:
+                    </p>
+
+                    <code>npm uninstall package</code>
+
+                </div>
+
+            </section>
+
+
+        </aside>
+
+    </div>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="window">
+
+        <div class="window-body">
+
+            <p>
+                 © 2026 Dependency Manager
+            </p>
+
+            <p>
+                Учебный проект по системам управления зависимостями
+                NPM и Composer.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="js/main.js"></script>
+
+</body>

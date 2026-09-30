@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>package.json — Dependency Manager</title>
+
+    <link rel="stylesheet" href="css/98.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="window">
+        <div class="title-bar">
+            <div class="title-bar-text">Dependency Manager</div>
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+
+        <div class="window-body">
+<nav class="main-nav" aria-label="Основная навигация">
+
+    <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Открыть меню"
+        aria-expanded="false">
+        ☰ Меню
+    </button>
+
+    <div class="nav-buttons" id="navButtons">
+
+        <button onclick="location.href='index.html'">
+            Главная
+        </button>
+
+        <button onclick="location.href='npm.html'">
+            NPM
+        </button>
+
+        <button onclick="location.href='composer.html'">
+            Composer
+        </button>
+
+        <button onclick="location.href='comparison.html'">
+            Сравнение
+        </button>
+
+        <button onclick="location.href='installation.html'">
+            Установка
+        </button>
+
+        <button onclick="location.href='practice.html'">
+            Практика
+        </button>
+
+        <button onclick="location.href='faq.html'">
+            FAQ
+        </button>
+
+    </div>
+
+</nav>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+
+    <div class="content-wrapper">
+
+        <div class="main-content">
+
+            <section class="window">
+                <div class="title-bar">
+                    <div class="title-bar-text">Что такое package.json?</div>
+                </div>
+
+                <div class="window-body">
+                    <p>
+                        <strong>package.json</strong> — это основной файл проекта,
+                        использующего NPM. В нём хранится информация о проекте,
+                        его зависимостях, скриптах и других настройках.
+                    </p>
+
+                    <p>
+                        Благодаря этому файлу разработчик может описать,
+                        какие пакеты необходимы проекту и какие команды
+                        используются для его запуска или сборки.
+                    </p>
+
+                    <p>
+                        Файл находится в корневой папке проекта.
+                    </p>
+                </div>
+            </section>
+
+
+            <section class="window">
+                <div class="title-bar">
+                    <div class="title-bar-text">Пример package.json</div>
+                </div>
+
+                <div class="window-body">
+
+                    <pre><code>{
+  "name": "dependency-manager",
+  "version": "1.0.0",
+  "description": "Учебный проект о системах управления зависимостями",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "98.css": "^0.1.20"
+  }
+}</code></pre>
+
+                    <p>
+                        В данном примере проект использует библиотеку
+                        <strong>98.css</strong> как зависимость.
+                    </p>
+
+                </div>
+            </section>
+
+
+            <section class="window">
+                <div class="title-bar">
+                    <div class="title-bar-text">Основные поля</div>
+                </div>
+
+                <div class="window-body">
+
+                    <ul>
+                        <li>
+                            <strong>name</strong> — название проекта.
+                        </li>
+
+                        <li>
+                            <strong>version</strong> — версия проекта.
+                        </li>
+
+                        <li>
+                            <strong>description</strong> — краткое описание.
+                        </li>
+
+                        <li>
+                            <strong>main</strong> — основной файл приложения.
+                        </li>
+
+                        <li>
+                            <strong>scripts</strong> — команды, которые можно
+                            запускать через NPM.
+                        </li>
+
+                        <li>
+                            <strong>dependencies</strong> — зависимости,
+                            необходимые для работы проекта.
+                        </li>
+                    </ul>
+
+                </div>
+            </section>
+
+
+            <section class="window">
+                <div class="title-bar">
+                    <div class="title-bar-text">dependencies и devDependencies</div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        Зависимости проекта обычно разделяются на две основные
+                        категории.
+                    </p>
+
+                    <h4>dependencies</h4>
+
+                    <p>
+                        Это пакеты, которые нужны приложению непосредственно
+                        во время его работы.
+                    </p>
+
+                    <h4>devDependencies</h4>
+
+                    <p>
+                        Это пакеты, которые используются преимущественно
+                        во время разработки, тестирования или сборки проекта.
+                    </p>
+
+                    <pre><code>{
+  "dependencies": {
+    "98.css": "^0.1.20"
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0"
+  }
+}</code></pre>
+
+                </div>
+            </section>
+
+
+            <section class="window">
+                <div class="title-bar">
+                    <div class="title-bar-text">Как создать package.json?</div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        Создать файл можно автоматически с помощью команды:
+                    </p>
+
+                    <pre><code>npm init</code></pre>
+
+                    <p>
+                        Если нужно сразу создать файл с настройками по умолчанию,
+                        используется:
+                    </p>
+
+                    <pre><code>npm init -y</code></pre>
+
+                    <p>
+                        Именно команду <strong>npm init -y</strong> мы использовали
+                        при создании этого учебного проекта.
+                    </p>
+
+                </div>
+            </section>
+
+        </div>
+
+
+        <aside class="sidebar">
+
+            <section class="window">
+                <div class="title-bar">
+                    <div class="title-bar-text">Быстрая навигация</div>
+                </div>
+
+                <div class="window-body">
+
+                    <ul>
+                        <li>
+                            <a href="index.html">Главная</a>
+                        </li>
+
+                        <li>
+                            <a href="npm.html">NPM</a>
+                        </li>
+
+                        <li>
+                            <a href="composer.html">Composer</a>
+                        </li>
+
+                        <li>
+                            <a href="comparison.html">Сравнение</a>
+                        </li>
+
+                        <li>
+                            <a href="package-json.html">
+                                package.json
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="installation.html">
+                                Установка
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+            </section>
+
+
+            <section class="window">
+                <div class="title-bar">
+                    <div class="title-bar-text">Важно</div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        <strong>package.json</strong> описывает зависимости
+                        проекта и его настройки.
+                    </p>
+
+                    <p>
+                        Файл можно создать вручную или автоматически
+                        с помощью NPM.
+                    </p>
+
+                </div>
+            </section>
+
+        </aside>
+
+    </div>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="window">
+        <div class="window-body">
+            <p>
+                © 2026 Dependency Manager
+            </p>
+
+            <p>
+                Учебный проект по системам управления зависимостями
+                NPM и Composer.
+            </p>
+        </div>
+    </div>
+
+</footer>
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

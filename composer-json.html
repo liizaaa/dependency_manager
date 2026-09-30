@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>composer.json — Dependency Manager</title>
+
+    <link rel="stylesheet" href="css/98.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div class="window">
+
+        <div class="title-bar">
+            <div class="title-bar-text">Dependency Manager</div>
+
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+
+        <div class="window-body">
+
+<nav class="main-nav" aria-label="Основная навигация">
+
+    <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Открыть меню"
+        aria-expanded="false">
+        ☰ Меню
+    </button>
+
+    <div class="nav-buttons" id="navButtons">
+
+        <button onclick="location.href='index.html'">
+            Главная
+        </button>
+
+        <button onclick="location.href='npm.html'">
+            NPM
+        </button>
+
+        <button onclick="location.href='composer.html'">
+            Composer
+        </button>
+
+        <button onclick="location.href='comparison.html'">
+            Сравнение
+        </button>
+
+        <button onclick="location.href='installation.html'">
+            Установка
+        </button>
+
+        <button onclick="location.href='practice.html'">
+            Практика
+        </button>
+
+        <button onclick="location.href='faq.html'">
+            FAQ
+        </button>
+
+    </div>
+
+</nav>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main class="container">
+
+    <div class="content-wrapper">
+
+        <div class="main-content">
+
+
+            <section class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Что такое composer.json?
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        <strong>composer.json</strong> — основной файл
+                        конфигурации проекта, который использует
+                        менеджер зависимостей Composer.
+                    </p>
+
+                    <p>
+                        В этом файле указываются зависимости PHP-проекта,
+                        информация о самом проекте, версии пакетов и
+                        дополнительные настройки.
+                    </p>
+
+                    <p>
+                        Файл обычно располагается в корневой директории
+                        проекта.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <section class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Пример composer.json
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <pre><code>{
+    "name": "example/project",
+    "description": "Учебный PHP-проект",
+    "require": {
+        "monolog/monolog": "^3.0"
+    }
+}</code></pre>
+
+                    <p>
+                        В данном примере проект использует библиотеку
+                        <strong>Monolog</strong>.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <section class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Основные поля composer.json
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <ul>
+
+                        <li>
+                            <strong>name</strong> — название проекта.
+                        </li>
+
+                        <li>
+                            <strong>description</strong> — описание проекта.
+                        </li>
+
+                        <li>
+                            <strong>require</strong> — основные зависимости
+                            проекта.
+                        </li>
+
+                        <li>
+                            <strong>require-dev</strong> — зависимости,
+                            необходимые для разработки и тестирования.
+                        </li>
+
+                        <li>
+                            <strong>autoload</strong> — настройки
+                            автоматической загрузки классов.
+                        </li>
+
+                        <li>
+                            <strong>scripts</strong> — команды,
+                            которые можно запускать через Composer.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </section>
+
+
+            <section class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        require и require-dev
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <h4>require</h4>
+
+                    <p>
+                        В разделе <strong>require</strong> указываются
+                        пакеты, необходимые приложению для нормальной
+                        работы.
+                    </p>
+
+                    <pre><code>{
+    "require": {
+        "monolog/monolog": "^3.0"
+    }
+}</code></pre>
+
+
+                    <h4>require-dev</h4>
+
+                    <p>
+                        В разделе <strong>require-dev</strong> указываются
+                        пакеты, которые используются во время разработки,
+                        тестирования или отладки.
+                    </p>
+
+                    <pre><code>{
+    "require-dev": {
+        "phpunit/phpunit": "^11.0"
+    }
+}</code></pre>
+
+                </div>
+
+            </section>
+
+
+            <section class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Как создать composer.json?
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        Создать новый файл конфигурации можно с помощью
+                        команды:
+                    </p>
+
+                    <pre><code>composer init</code></pre>
+
+                    <p>
+                        Composer запустит пошаговый процесс настройки
+                        проекта и поможет создать файл
+                        <strong>composer.json</strong>.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <section class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Каталог vendor
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        После установки зависимостей Composer создаёт
+                        каталог <strong>vendor</strong>.
+                    </p>
+
+                    <p>
+                        В нём находятся установленные PHP-пакеты и
+                        служебные файлы, необходимые Composer для
+                        автоматической загрузки зависимостей.
+                    </p>
+
+                    <p>
+                        Аналогичную роль в проектах NPM выполняет
+                        каталог <strong>node_modules</strong>.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+
+        <aside class="sidebar">
+
+
+            <section class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Быстрая навигация
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <ul>
+
+                        <li>
+                            <a href="index.html">
+                                Главная
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="npm.html">
+                                NPM
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="composer.html">
+                                Composer
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="comparison.html">
+                                Сравнение
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="package-json.html">
+                                package.json
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="composer-json.html">
+                                composer.json
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="installation.html">
+                                Установка
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </section>
+
+
+            <section class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Запомни
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        NPM использует
+                        <strong>package.json</strong>.
+                    </p>
+
+                    <p>
+                        Composer использует
+                        <strong>composer.json</strong>.
+                    </p>
+
+                    <p>
+                        Оба файла описывают зависимости
+                        и настройки проекта.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+        </aside>
+
+    </div>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="window">
+
+        <div class="window-body">
+
+            <p>
+                © 2026 Dependency Manager
+            </p>
+
+            <p>
+                Учебный проект по системам управления зависимостями
+                NPM и Composer.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

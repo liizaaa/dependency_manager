@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Composer — Dependency Manager</title>
+
+    <link rel="stylesheet" href="css/98.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div class="window">
+
+        <div class="title-bar">
+            <div class="title-bar-text">
+                Dependency Manager — Composer
+            </div>
+
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+
+        <div class="window-body">
+
+<nav class="main-nav" aria-label="Основная навигация">
+
+    <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Открыть меню"
+        aria-expanded="false">
+        ☰ Меню
+    </button>
+
+    <div class="nav-buttons" id="navButtons">
+
+        <button onclick="location.href='index.html'">
+            Главная
+        </button>
+
+        <button onclick="location.href='npm.html'">
+            NPM
+        </button>
+
+        <button onclick="location.href='composer.html'">
+            Composer
+        </button>
+
+        <button onclick="location.href='comparison.html'">
+            Сравнение
+        </button>
+
+        <button onclick="location.href='installation.html'">
+            Установка
+        </button>
+
+        <button onclick="location.href='practice.html'">
+            Практика
+        </button>
+
+        <button onclick="location.href='faq.html'">
+            FAQ
+        </button>
+
+    </div>
+
+</nav>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main class="container">
+
+    <div class="content-wrapper">
+
+        <section class="main-content">
+
+            <div class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Что такое Composer?
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <h1>Composer</h1>
+
+                    <p>
+                        Composer — это система управления зависимостями
+                        для языка программирования PHP.
+                    </p>
+
+                    <p>
+                        С помощью Composer разработчик может подключать
+                        сторонние библиотеки, управлять их версиями
+                        и автоматически устанавливать необходимые
+                        зависимости проекта.
+                    </p>
+
+                    <p>
+                        Основная информация о зависимостях хранится
+                        в файле <strong>composer.json</strong>.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Основные возможности Composer
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <ul>
+
+                        <li>
+                            Установка PHP-библиотек
+                        </li>
+
+                        <li>
+                            Управление версиями зависимостей
+                        </li>
+
+                        <li>
+                            Обновление пакетов
+                        </li>
+
+                        <li>
+                            Удаление зависимостей
+                        </li>
+
+                        <li>
+                            Автоматическая загрузка библиотек
+                        </li>
+
+                        <li>
+                            Работа с Packagist
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <div class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Основные команды
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        Создание файла composer.json:
+                    </p>
+
+                    <pre><code>composer init</code></pre>
+
+                    <p>
+                        Установка всех зависимостей проекта:
+                    </p>
+
+                    <pre><code>composer install</code></pre>
+
+                    <p>
+                        Добавление новой зависимости:
+                    </p>
+
+                    <pre><code>composer require monolog/monolog</code></pre>
+
+                    <p>
+                        Обновление зависимостей:
+                    </p>
+
+                    <pre><code>composer update</code></pre>
+
+                    <p>
+                        Удаление зависимости:
+                    </p>
+
+                    <pre><code>composer remove monolog/monolog</code></pre>
+
+                </div>
+
+            </div>
+
+
+            <div class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Файл composer.json
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        Файл <strong>composer.json</strong> содержит
+                        информацию о проекте и его зависимостях.
+                    </p>
+
+                    <p>
+                        Например, зависимость от библиотеки Monolog
+                        можно указать следующим образом:
+                    </p>
+
+                    <pre><code>{
+    "require": {
+        "monolog/monolog": "^3.0"
+    }
+}</code></pre>
+
+                    <p>
+                        После добавления зависимости Composer
+                        устанавливает необходимые файлы в каталог
+                        <strong>vendor</strong>.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Где используется Composer?
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        Composer широко применяется в PHP-проектах.
+                        Он используется как в небольших учебных проектах,
+                        так и в крупных веб-приложениях.
+                    </p>
+
+                    <ol>
+
+                        <li>
+                            Создание PHP-проекта
+                        </li>
+
+                        <li>
+                            Добавление необходимых библиотек
+                        </li>
+
+                        <li>
+                            Установка зависимостей
+                        </li>
+
+                        <li>
+                            Разработка приложения
+                        </li>
+
+                        <li>
+                            Обновление зависимостей при необходимости
+                        </li>
+
+                    </ol>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <aside class="sidebar">
+
+            <div class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Composer
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        На этой странице:
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            О Composer
+                        </li>
+
+                        <li>
+                            Возможности
+                        </li>
+
+                        <li>
+                            Команды
+                        </li>
+
+                        <li>
+                            composer.json
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <div class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Другие разделы
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        <a href="npm.html">
+                            NPM
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="comparison.html">
+                            Сравнение
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="installation.html">
+                            Установка
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="window">
+
+        <div class="window-body">
+
+            <p>
+                © 2026 Dependency Manager
+            </p>
+
+            <p>
+                Учебный проект о системах управления зависимостями NPM и Composer.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="js/main.js"></script>
+
+</body>
+
+</html>

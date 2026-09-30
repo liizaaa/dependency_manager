@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Установка — Dependency Manager</title>
+
+    <link rel="stylesheet" href="css/98.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div class="window">
+
+        <div class="title-bar">
+            <div class="title-bar-text">
+                Dependency Manager
+            </div>
+
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+
+        <div class="window-body">
+
+<nav class="main-nav" aria-label="Основная навигация">
+
+    <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Открыть меню"
+        aria-expanded="false">
+        ☰ Меню
+    </button>
+
+    <div class="nav-buttons" id="navButtons">
+
+        <button onclick="location.href='index.html'">
+            Главная
+        </button>
+
+        <button onclick="location.href='npm.html'">
+            NPM
+        </button>
+
+        <button onclick="location.href='composer.html'">
+            Composer
+        </button>
+
+        <button onclick="location.href='comparison.html'">
+            Сравнение
+        </button>
+
+        <button onclick="location.href='installation.html'">
+            Установка
+        </button>
+
+        <button onclick="location.href='practice.html'">
+            Практика
+        </button>
+
+        <button onclick="location.href='faq.html'">
+            FAQ
+        </button>
+
+    </div>
+
+</nav>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main class="container">
+
+    <div class="content-wrapper">
+
+        <div class="main-content">
+
+
+            <!-- NPM -->
+
+            <section class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Установка NPM
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        <strong>NPM</strong> устанавливается вместе с
+                        Node.js. Поэтому для начала работы необходимо
+                        установить Node.js на компьютер.
+                    </p>
+
+                    <p>
+                        После установки можно проверить наличие Node.js
+                        и NPM с помощью команд:
+                    </p>
+
+                    <pre><code>node --version
+npm --version</code></pre>
+
+                    <p>
+                        Если команды возвращают номера версий,
+                        установка выполнена успешно.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Создание проекта -->
+
+            <section class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Создание NPM-проекта
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        Сначала необходимо создать папку проекта
+                        и перейти в неё через терминал:
+                    </p>
+
+                    <pre><code>mkdir my-project
+cd my-project</code></pre>
+
+                    <p>
+                        Затем создаётся файл
+                        <strong>package.json</strong>:
+                    </p>
+
+                    <pre><code>npm init -y</code></pre>
+
+                    <p>
+                        После выполнения команды в папке появится
+                        файл package.json.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Установка пакета -->
+
+            <section class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Установка пакета
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        Чтобы установить пакет, используется команда:
+                    </p>
+
+                    <pre><code>npm install имя-пакета</code></pre>
+
+                    <p>
+                        Например, в нашем учебном проекте мы установили
+                        библиотеку 98.css:
+                    </p>
+
+                    <pre><code>npm install 98.css</code></pre>
+
+                    <p>
+                        После установки NPM добавляет пакет в
+                        package.json и создаёт или обновляет
+                        package-lock.json.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Основные команды NPM -->
+
+            <section class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Основные команды NPM
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <table>
+
+                        <caption>
+                            Часто используемые команды NPM
+                        </caption>
+
+                        <thead>
+
+                            <tr>
+                                <th scope="col">Команда</th>
+                                <th scope="col">Назначение</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>
+                                    <code>npm init</code>
+                                </td>
+
+                                <td>
+                                    Создание package.json
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <code>npm install</code>
+                                </td>
+
+                                <td>
+                                    Установка зависимостей
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <code>npm install package</code>
+                                </td>
+
+                                <td>
+                                    Установка определённого пакета
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <code>npm uninstall package</code>
+                                </td>
+
+                                <td>
+                                    Удаление пакета
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <code>npm update</code>
+                                </td>
+
+                                <td>
+                                    Обновление зависимостей
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <code>npm list</code>
+                                </td>
+
+                                <td>
+                                    Просмотр установленных пакетов
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- Composer -->
+
+            <section class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Установка Composer
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        <strong>Composer</strong> — менеджер зависимостей
+                        для PHP.
+                    </p>
+
+                    <p>
+                        После установки Composer его работу можно
+                        проверить командой:
+                    </p>
+
+                    <pre><code>composer --version</code></pre>
+
+                    <p>
+                        Команда должна вывести установленную версию
+                        Composer.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Composer project -->
+
+            <section class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Создание проекта Composer
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        Для создания файла composer.json используется:
+                    </p>
+
+                    <pre><code>composer init</code></pre>
+
+                    <p>
+                        После настройки проекта можно установить
+                        необходимые зависимости:
+                    </p>
+
+                    <pre><code>composer install</code></pre>
+
+                    <p>
+                        Установленные пакеты будут помещены
+                        в каталог <strong>vendor</strong>.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+            <!-- Composer commands -->
+
+            <section class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Основные команды Composer
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <table>
+
+                        <caption>
+                            Часто используемые команды Composer
+                        </caption>
+
+                        <thead>
+
+                            <tr>
+                                <th scope="col">Команда</th>
+                                <th scope="col">Назначение</th>
+                            </tr>
+
+                        </thead>
+
+                        <tbody>
+
+                            <tr>
+                                <td>
+                                    <code>composer init</code>
+                                </td>
+
+                                <td>
+                                    Создание composer.json
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <code>composer install</code>
+                                </td>
+
+                                <td>
+                                    Установка зависимостей
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <code>composer require package</code>
+                                </td>
+
+                                <td>
+                                    Добавление пакета
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <code>composer update</code>
+                                </td>
+
+                                <td>
+                                    Обновление зависимостей
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <code>composer remove package</code>
+                                </td>
+
+                                <td>
+                                    Удаление пакета
+                                </td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+            </section>
+
+
+            <!-- Сравнение -->
+
+            <section class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Что выбрать?
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        Выбор менеджера зависимостей зависит от
+                        используемой технологии.
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            Для JavaScript и Node.js обычно используется
+                            <strong>NPM</strong>.
+                        </li>
+
+                        <li>
+                            Для PHP-проектов используется
+                            <strong>Composer</strong>.
+                        </li>
+
+                    </ul>
+
+                    <p>
+                        Оба инструмента решают похожую задачу:
+                        помогают устанавливать, обновлять и удалять
+                        зависимости проекта.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+        </div>
+
+
+        <aside class="sidebar">
+
+
+            <section class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Разделы
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <ul>
+
+                        <li>
+                            <a href="index.html">
+                                Главная
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="npm.html">
+                                NPM
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="composer.html">
+                                Composer
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="comparison.html">
+                                Сравнение
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="package-json.html">
+                                package.json
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="composer-json.html">
+                                composer.json
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="installation.html">
+                                Установка
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </section>
+
+
+            <section class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Подсказка
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        NPM работает с JavaScript и Node.js,
+                        а Composer — с PHP.
+                    </p>
+
+                    <p>
+                        Перед использованием менеджера зависимостей
+                        необходимо установить соответствующую
+                        среду разработки.
+                    </p>
+
+                </div>
+
+            </section>
+
+
+        </aside>
+
+    </div>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="window">
+
+        <div class="window-body">
+
+            <p>
+                 © 2026 Dependency Manager
+            </p>
+
+            <p>
+                Учебный проект по системам управления зависимостями
+                NPM и Composer.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="js/main.js"></script>
+
+</body>
+
+</html>
+

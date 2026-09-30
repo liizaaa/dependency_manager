@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NPM и Composer — сравнение</title>
+
+    <link rel="stylesheet" href="css/98.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div class="window">
+
+        <div class="title-bar">
+            <div class="title-bar-text">
+                Dependency Manager — Сравнение
+            </div>
+
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+
+        <div class="window-body">
+
+<nav class="main-nav" aria-label="Основная навигация">
+
+    <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Открыть меню"
+        aria-expanded="false">
+        ☰ Меню
+    </button>
+
+    <div class="nav-buttons" id="navButtons">
+
+        <button onclick="location.href='index.html'">
+            Главная
+        </button>
+
+        <button onclick="location.href='npm.html'">
+            NPM
+        </button>
+
+        <button onclick="location.href='composer.html'">
+            Composer
+        </button>
+
+        <button onclick="location.href='comparison.html'">
+            Сравнение
+        </button>
+
+        <button onclick="location.href='installation.html'">
+            Установка
+        </button>
+
+        <button onclick="location.href='practice.html'">
+            Практика
+        </button>
+
+        <button onclick="location.href='faq.html'">
+            FAQ
+        </button>
+
+    </div>
+
+</nav>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main class="container">
+
+    <div class="content-wrapper">
+
+        <section class="main-content">
+
+            <div class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        NPM и Composer
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <h1>
+                        Сравнение систем управления зависимостями
+                    </h1>
+
+                    <p>
+                        NPM и Composer решают похожую задачу —
+                        управление внешними пакетами и библиотеками,
+                        необходимыми для работы программного проекта.
+                    </p>
+
+                    <p>
+                        Главное различие заключается в экосистемах:
+                        NPM используется преимущественно в проектах
+                        JavaScript и Node.js, а Composer — в проектах PHP.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Основные различия
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <div class="table-container">
+
+                        <table>
+
+                            <caption>
+                                Сравнение NPM и Composer
+                            </caption>
+
+                            <thead>
+
+                                <tr>
+                                    <th scope="col">
+                                        Характеристика
+                                    </th>
+
+                                    <th scope="col">
+                                        NPM
+                                    </th>
+
+                                    <th scope="col">
+                                        Composer
+                                    </th>
+                                </tr>
+
+                            </thead>
+
+                            <tbody>
+
+                                <tr>
+                                    <th scope="row">
+                                        Экосистема
+                                    </th>
+
+                                    <td>
+                                        JavaScript / Node.js
+                                    </td>
+
+                                    <td>
+                                        PHP
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">
+                                        Основной файл
+                                    </th>
+
+                                    <td>
+                                        package.json
+                                    </td>
+
+                                    <td>
+                                        composer.json
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">
+                                        Репозиторий пакетов
+                                    </th>
+
+                                    <td>
+                                        npm Registry
+                                    </td>
+
+                                    <td>
+                                        Packagist
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">
+                                        Установка зависимостей
+                                    </th>
+
+                                    <td>
+                                        npm install
+                                    </td>
+
+                                    <td>
+                                        composer install
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">
+                                        Добавление пакета
+                                    </th>
+
+                                    <td>
+                                        npm install package
+                                    </td>
+
+                                    <td>
+                                        composer require package
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">
+                                        Обновление
+                                    </th>
+
+                                    <td>
+                                        npm update
+                                    </td>
+
+                                    <td>
+                                        composer update
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">
+                                        Удаление пакета
+                                    </th>
+
+                                    <td>
+                                        npm uninstall package
+                                    </td>
+
+                                    <td>
+                                        composer remove package
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">
+                                        Файл блокировки
+                                    </th>
+
+                                    <td>
+                                        package-lock.json
+                                    </td>
+
+                                    <td>
+                                        composer.lock
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <th scope="row">
+                                        Каталог зависимостей
+                                    </th>
+
+                                    <td>
+                                        node_modules
+                                    </td>
+
+                                    <td>
+                                        vendor
+                                    </td>
+                                </tr>
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Когда используется NPM?
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        NPM применяется в проектах, связанных с JavaScript
+                        и Node.js.
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            Веб-приложения на JavaScript
+                        </li>
+
+                        <li>
+                            Серверные приложения Node.js
+                        </li>
+
+                        <li>
+                            Frontend-проекты
+                        </li>
+
+                        <li>
+                            Проекты с React, Vue и другими библиотеками
+                        </li>
+
+                    </ul>
+
+                    <button onclick="location.href='npm.html'">
+                        Подробнее о NPM
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Когда используется Composer?
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        Composer используется в экосистеме PHP
+                        для управления библиотеками и зависимостями.
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            PHP-сайты
+                        </li>
+
+                        <li>
+                            Веб-приложения
+                        </li>
+
+                        <li>
+                            PHP-фреймворки
+                        </li>
+
+                        <li>
+                            Серверные приложения
+                        </li>
+
+                    </ul>
+
+                    <button onclick="location.href='composer.html'">
+                        Подробнее о Composer
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Что общего?
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        Несмотря на различия, обе системы предназначены
+                        для решения одной общей задачи — автоматизации
+                        управления зависимостями программного проекта.
+                    </p>
+
+                    <ol>
+
+                        <li>
+                            Разработчик указывает необходимые пакеты.
+                        </li>
+
+                        <li>
+                            Менеджер зависимостей находит нужные версии.
+                        </li>
+
+                        <li>
+                            Пакеты устанавливаются в проект.
+                        </li>
+
+                        <li>
+                            Информация о зависимостях сохраняется
+                            в конфигурационных файлах.
+                        </li>
+
+                    </ol>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <aside class="sidebar">
+
+            <div class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Содержание
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <ul>
+
+                        <li>
+                            Сравнение
+                        </li>
+
+                        <li>
+                            NPM
+                        </li>
+
+                        <li>
+                            Composer
+                        </li>
+
+                        <li>
+                            Общие возможности
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <div class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Навигация
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        <a href="index.html">
+                            Главная
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="npm.html">
+                            NPM
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="composer.html">
+                            Composer
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="installation.html">
+                            Установка
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="window">
+
+        <div class="window-body">
+
+            <p>
+                © 2026 Dependency Manager
+            </p>
+
+            <p>
+                Учебный проект о системах управления зависимостями NPM и Composer.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="js/main.js"></script>
+
+</body>
+
+</html>

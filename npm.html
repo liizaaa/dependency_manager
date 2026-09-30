@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NPM - Dependency Manager</title>
+
+    <link rel="stylesheet" href="css/98.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div class="window">
+
+        <div class="title-bar">
+            <div class="title-bar-text">
+                Dependency Manager — NPM
+            </div>
+
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+
+        <div class="window-body">
+
+<nav class="main-nav" aria-label="Основная навигация">
+
+    <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Открыть меню"
+        aria-expanded="false">
+        ☰ Меню
+    </button>
+
+    <div class="nav-buttons" id="navButtons">
+
+        <button onclick="location.href='index.html'">
+            Главная
+        </button>
+
+        <button onclick="location.href='npm.html'">
+            NPM
+        </button>
+
+        <button onclick="location.href='composer.html'">
+            Composer
+        </button>
+
+        <button onclick="location.href='comparison.html'">
+            Сравнение
+        </button>
+
+        <button onclick="location.href='installation.html'">
+            Установка
+        </button>
+
+        <button onclick="location.href='practice.html'">
+            Практика
+        </button>
+
+        <button onclick="location.href='faq.html'">
+            FAQ
+        </button>
+
+    </div>
+
+</nav>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main class="container">
+
+    <div class="content-wrapper">
+
+        <section class="main-content">
+
+            <div class="window" id="about">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Что такое NPM?
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <h1>NPM</h1>
+
+                    <p>
+                        NPM (Node Package Manager) - система управления
+                        пакетами для JavaScript и среды выполнения Node.js.
+                    </p>
+
+                    <p>
+                        С помощью NPM разработчики могут устанавливать,
+                        обновлять и удалять сторонние библиотеки,
+                        необходимые для работы проекта.
+                    </p>
+
+                    <p>
+                        NPM также позволяет описывать зависимости проекта
+                        в специальном файле <strong>package.json</strong>.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Основные возможности
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <ul>
+                        <li>
+                            Установка пакетов
+                        </li>
+
+                        <li>
+                            Управление версиями
+                        </li>
+
+                        <li>
+                            Обновление зависимостей
+                        </li>
+
+                        <li>
+                            Удаление пакетов
+                        </li>
+
+                        <li>
+                            Работа с package.json
+                        </li>
+
+                        <li>
+                            Управление dev-зависимостями
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <div class="window" id="commands">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Основные команды
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>Инициализация проекта:</p>
+
+                    <pre><code>npm init</code></pre>
+
+                    <p>Установка зависимости:</p>
+
+                    <pre><code>npm install 98.css</code></pre>
+
+                    <p>Удаление зависимости:</p>
+
+                    <pre><code>npm uninstall 98.css</code></pre>
+
+                    <p>Обновление пакетов:</p>
+
+                    <pre><code>npm update</code></pre>
+
+                    <p>Просмотр установленных пакетов:</p>
+
+                    <pre><code>npm list</code></pre>
+
+                </div>
+
+            </div>
+
+
+            <div class="window" id="package">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Файл package.json
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        Файл <strong>package.json</strong> является
+                        одним из основных файлов проекта Node.js.
+                    </p>
+
+                    <p>
+                        В нём хранится информация о проекте,
+                        его версии, командах и используемых зависимостях.
+                    </p>
+
+                    <pre><code>{
+  "name": "dependency-manager",
+  "version": "1.0.0",
+  "dependencies": {
+    "98.css": "^0.1.21"
+  }
+}</code></pre>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <aside class="sidebar">
+
+            <div class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        NPM
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        Навигация:
+                    </p>
+
+                    <ul>
+
+                        <li>
+                            <a href="#about">
+                                О NPM
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#commands">
+                                Команды
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#package">
+                                package.json
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <div class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Связанные разделы
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        <a href="composer.html">
+                            Composer
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="comparison.html">
+                            NPM vs Composer
+                        </a>
+                    </p>
+
+                    <p>
+                        <a href="installation.html">
+                            Установка
+                        </a>
+                    </p>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="window">
+
+        <div class="window-body">
+
+            <p>
+                © 2026 Dependency Manager
+            </p>
+
+            <p>
+                Учебный проект о системах управления зависимостями.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="js/main.js"></script>
+
+</body>
+
+</html>

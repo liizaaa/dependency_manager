@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dependency Manager — NPM и Composer</title>
+
+    <link rel="stylesheet" href="css/98.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div class="window">
+
+        <div class="title-bar">
+            <div class="title-bar-text">
+                Dependency Manager
+            </div>
+
+            <div class="title-bar-controls">
+                <button aria-label="Minimize"></button>
+                <button aria-label="Maximize"></button>
+                <button aria-label="Close"></button>
+            </div>
+        </div>
+
+        <div class="window-body">
+
+<nav class="main-nav" aria-label="Основная навигация">
+
+    <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Открыть меню"
+        aria-expanded="false">
+        ☰ Меню
+    </button>
+
+    <div class="nav-buttons" id="navButtons">
+
+        <button onclick="location.href='index.html'">
+            Главная
+        </button>
+
+        <button onclick="location.href='npm.html'">
+            NPM
+        </button>
+
+        <button onclick="location.href='composer.html'">
+            Composer
+        </button>
+
+        <button onclick="location.href='comparison.html'">
+            Сравнение
+        </button>
+
+        <button onclick="location.href='installation.html'">
+            Установка
+        </button>
+
+        <button onclick="location.href='practice.html'">
+            Практика
+        </button>
+
+        <button onclick="location.href='faq.html'">
+            FAQ
+        </button>
+
+    </div>
+
+</nav>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main class="container">
+
+    <section class="hero">
+
+        <div class="window">
+
+            <div class="title-bar">
+                <div class="title-bar-text">
+                    Добро пожаловать!
+                </div>
+
+                <div class="title-bar-controls">
+                    <button aria-label="Close"></button>
+                </div>
+            </div>
+
+            <div class="window-body">
+
+                <h1>
+                    Системы управления зависимостями
+                </h1>
+
+                <p>
+                    Добро пожаловать на учебный сайт,
+                    посвящённый системам управления зависимостями
+                    NPM и Composer.
+                </p>
+
+                <p>
+                    Здесь вы узнаете, зачем разработчикам нужны
+                    зависимости, как они устанавливаются и
+                    каким образом управляются в проектах.
+                </p>
+
+                <button class="default">
+                    Начать изучение
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <div class="content-wrapper">
+
+        <section class="main-content">
+
+            <div class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Что такое зависимости?
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        Зависимость — это сторонняя библиотека
+                        или программный пакет, который используется
+                        внутри проекта для решения определённой задачи.
+                    </p>
+
+                    <p>
+                        Вместо того чтобы создавать каждую функцию
+                        самостоятельно, разработчик может подключить
+                        готовый пакет и использовать его возможности
+                        в своём проекте.
+                    </p>
+
+                    <h3>
+                        Зачем нужны менеджеры зависимостей?
+                    </h3>
+
+                    <ul>
+                        <li>Установка сторонних библиотек</li>
+                        <li>Управление версиями пакетов</li>
+                        <li>Обновление зависимостей</li>
+                        <li>Удаление ненужных пакетов</li>
+                        <li>Автоматическая установка зависимостей проекта</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <div class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Основные системы
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <div class="system-card">
+
+                        <h3>NPM</h3>
+
+                        <p>
+                            Node Package Manager — менеджер пакетов
+                            для экосистемы JavaScript и Node.js.
+                        </p>
+
+                        <button onclick="location.href='npm.html'">
+                            Подробнее
+                        </button>
+
+                    </div>
+
+
+                    <div class="system-card">
+
+                        <h3>Composer</h3>
+
+                        <p>
+                            Composer — менеджер зависимостей,
+                            используемый в проектах на PHP.
+                        </p>
+
+                        <button onclick="location.href='composer.html'">
+                            Подробнее
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <aside class="sidebar">
+
+            <div class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Быстрый доступ
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        Разделы сайта:
+                    </p>
+
+                    <ul>
+                        <li>
+                            <a href="npm.html">
+                                NPM
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="composer.html">
+                                Composer
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="comparison.html">
+                                Сравнение
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="installation.html">
+                                Установка
+                            </a>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+            <div class="window">
+
+                <div class="title-bar">
+                    <div class="title-bar-text">
+                        Полезная информация
+                    </div>
+                </div>
+
+                <div class="window-body">
+
+                    <p>
+                        На сайте используются:
+                    </p>
+
+                    <ul>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        <li>98.css</li>
+                        <li>NPM</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </aside>
+
+    </div>
+
+</main>
+
+
+<footer class="site-footer">
+
+    <div class="window">
+
+        <div class="window-body">
+
+            <p>
+                © 2026 Dependency Manager
+            </p>
+
+            <p>
+                Учебный проект. Системы управления зависимостями NPM и Composer.
+            </p>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script src="js/main.js"></script>
+
+
+</body>
+</html>
