@@ -1,4 +1,4 @@
-[Открыть сайт на GitHub Pages](https://liizaaa.github.io/dependency_manager/)
+
 # Dependency Manager
 
 ## Системы управления зависимостями (NPM, Composer)
@@ -10,8 +10,7 @@
 ## GitHub Pages
 
 Ссылка на опубликованный сайт:
-
-> Будет добавлена после публикации проекта на GitHub Pages.
+[Открыть сайт на GitHub Pages](https://liizaaa.github.io/dependency_manager/)
 
 ## О проекте
 
